@@ -21,29 +21,31 @@ var pictureArray = [
 
 
 
-function getRandomPicture(elementId) {
+function displayRandomPictures() {
     
    var holdPictures = [];
    
     while (holdPictures.length < 3 ) {
         var randomPic = pictureArray[Math.floor(Math.random() * pictureArray.length)];
-        // var diplayImages = document.getElementById(elementId).innerHTML = "<img src='" + randomPic + "'>";
         if (!holdPictures.includes(randomPic) ){
             holdPictures.push(randomPic)
         }  
-    };
-   console.log(holdPictures)
+    }
+   
+    for (var index = 0; index < holdPictures.length; index++) {
+        var image = document.createElement("img");
+        var sendImage = document.getElementById("getRandomPicture");
+         image.src = holdPictures[index];
+         sendImage.appendChild(image);
+    }
+
+ 
+
+}
 
 
-    
-    
-    // }
-};
-    // (pictureArray.length !=3) {
-
-getRandomPicture("getRandomPicture1");   
-// getRandomPicture("getRandomPicture2");   
-// getRandomPicture("getRandomPicture3");   
+displayRandomPictures();   
+ 
 
  
 
