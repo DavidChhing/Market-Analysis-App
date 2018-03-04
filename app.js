@@ -38,27 +38,11 @@ function displayRandomPictures() {
          image.src = holdPictures[index];
          sendImage.appendChild(image);
     }
-
- 
-
 }
 
-
-displayRandomPictures();   
- 
+window.addEventListener("load", displayRandomPictures);
 
  
-
-
-
-// var shuffle = function(array) {
-//     var tmp, i, j;
-//     for (index = array.length; i>1;) {
-
-//     }
-// }
-
-
 // var allPictures = 
 
 // function getRandomPicture(randomPic, diplayImages) {
@@ -68,22 +52,31 @@ displayRandomPictures();
    
 // }
 
-
-// document.body.innerHTML = ("<img src='" + randomPic + "'>");
-//  = function(randomPic) {
-
-//     {
-// //         var picture1 =
-//         var picture2 = 
-//         var picture3
-
-//     }
+// window.addEventListener("load", function() {
+//     document.getElementById("show-chart-button").addEventListener("click", showChart);
 
 
-//     //     }
 
+// })
 
-//     // }
-//     var picture1 =
-// var picture2
-//     var picture3
+// window.onload = function () {
+// 	var chart = new CanvasJS.Chart("chartContainer", {
+// 		title:{
+// 			text: "Bus Mall"              
+// 		},
+// 		data: [              
+// 		{
+// 			// Change type to "doughnut", "line", "splineArea", etc.
+// 			type: "column",
+// 			dataPoints: pictureArray
+// 				{ label: "apple",  y: 10  },
+// 				{ label: "orange", y: 15  },
+// 				{ label: "banana", y: 25  },
+// 				{ label: "mango",  y: 30  },
+// 				{ label: "grape",  y: 28  }
+// 			]
+// 		}
+// 		]
+// 	});
+// 	chart.render();
+// }
