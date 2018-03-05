@@ -30,7 +30,6 @@ var Product = function(name, filePath) {
     this.y = 0;
 }
 
-
 var pictureArray = [];
 pictureArray.push(
     new Product("Star Wars Bag", "Pictures/bag.jpg"),
