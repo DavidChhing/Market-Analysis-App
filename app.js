@@ -10,7 +10,7 @@ function trackPicClick(event) {
     if (event.target.tagName == "IMG") {
         var index = event.target.src.lastIndexOf("/");
         var filePath = event.target.src.substring(index + 1);
-        for (var imageIndex = 0; imageIndex < pictureArray.length; imageIndex++); {
+        for (var imageIndex = 0; imageIndex < pictureArray.length; imageIndex++) {
             var item = pictureArray[imageIndex];
             if (item.filePath.indexOf(filePath) !== -1) {
                 item.y++;
@@ -65,7 +65,7 @@ function displayRandomPictures() {
          sendImage.appendChild(image);
     }
 }
-
+window.addEventListener("load", addCounter);
 window.addEventListener("load", displayRandomPictures);
 window.addEventListener("load", function() {
     document.getElementById("show-chart-button").addEventListener("click", showChart);
@@ -86,4 +86,3 @@ function showChart() {
 	});
 	chart.render();
 }
-window.addEventListener("load", addCounter);
