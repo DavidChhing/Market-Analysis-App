@@ -1,7 +1,5 @@
 'use strict';
 
-// window.onload = choosePic;
-
 var pictureArray = [
     "Pictures/bag.jpg",
     "Pictures/banana.jpg",
@@ -18,8 +16,6 @@ var pictureArray = [
     "Pictures/water_can.jpg",
     "Pictures/wine_glass.jpg",
 ];
-
-
 
 function displayRandomPictures() {
     
@@ -43,14 +39,7 @@ function displayRandomPictures() {
 window.addEventListener("load", displayRandomPictures);
 
  
-// var allPictures = 
 
-// function getRandomPicture(randomPic, diplayImages) {
-//     var randomPic = pictureArray[Math.floor(Math.random() * pictureArray.length)];
-//     var diplayImages = document.getElementById("getRandomPicture").innerHTML = "<img src='" + randomPic + "'>";
-//     for (var pictureIndex = 0; pictureIndex < pictureArray.length; pictureArray++)
-   
-// }
 
 window.addEventListener("load", function() {
     document.getElementById("show-chart-button").addEventListener("click", showChart);
