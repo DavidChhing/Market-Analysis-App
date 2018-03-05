@@ -33,24 +33,23 @@ var Product = function(name, filePath) {
 }
 
 
-var pictureArray = [
-    "Pictures/bag.jpg",
-    "Pictures/banana.jpg",
-    "Pictures/boots.jpg",
-    "Pictures/chair.jpg",
-    "Pictures/cthulhu.jpg",
-    "Pictures/dragon.jpg",
-    "Pictures/pen.jpg",
-    "Pictures/scissors.jpg",
-    "Pictures/shark.jpg",
-    "Pictures/babysweep.jpg",
-    "Pictures/unicorn.jpg",
-    "Pictures/usb.jpg",
-    "Pictures/water_can.jpg",
-    "Pictures/wine_glass.jpg",
-];
-
-
+var pictureArray = [];
+pictureArray.push(
+    new Product("Star Wars Bag", "Pictures/bag.jpg"),
+    new Product("Banana Cutter", "Pictures/banana.jpg"),
+    new Product("Yellow Boots", "Pictures/boots.jpg"),
+    new Product("Lumpy Chair", "Pictures/chair.jpg"),
+    new Product("Action Figure", "Pictures/cthulhu.jpg"),
+    new Product("Dragon Meat", "Pictures/dragon.jpg"),
+    new Product("Pen-stils", "Pictures/pen.jpg"),
+    new Product("Pizza Scissors", "Pictures/scissors.jpg"),
+    new Product("Shark Bag", "Pictures/shark.jpg"),
+    new Product("Baby Broom", "Pictures/babysweep.jpg"),
+    new Product("Uni-meat", "Pictures/unicorn.jpg"),
+    new Product("USB Tail", "Pictures/usb.jpg"),
+    new Product("Water Can Can", "Pictures/water_can.jpg"),
+    new Product("Whine Glass", "Pictures/wine_glass.jpg"),
+);
 
 function displayRandomPictures() {
     
