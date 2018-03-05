@@ -1,7 +1,5 @@
 'use strict';
 
-// window.onload = choosePic;
-
 var counter = 0;
 
 function addCounter() {
@@ -52,9 +50,7 @@ pictureArray.push(
 );
 
 function displayRandomPictures() {
-    
    var holdPictures = [];
-   
     while (holdPictures.length < 3 ) {
         var randomPic = pictureArray[Math.floor(Math.random() * pictureArray.length)];
         if (!holdPictures.includes(randomPic) ){
@@ -65,35 +61,29 @@ function displayRandomPictures() {
     for (var index = 0; index < holdPictures.length; index++) {
         var image = document.createElement("img");
         var sendImage = document.getElementById("getRandomPicture");
-         image.src = holdPictures[index];
+         image.src = holdPictures[index].filePath;
          sendImage.appendChild(image);
     }
 }
 
 window.addEventListener("load", displayRandomPictures);
-
 window.addEventListener("load", function() {
     document.getElementById("show-chart-button").addEventListener("click", showChart);
 })
 
-window.onload = function () {
+function showChart() {
 	var chart = new CanvasJS.Chart("chartContainer", {
 		title:{
-			text: "Bus Mall"              
+			text: "Bus Mall"
 		},
 		data: [              
 		{
 			// Change type to "doughnut", "line", "splineArea", etc.
 			type: "column",
 			dataPoints: pictureArray
-				{ label: "apple",  y: 10  },
-				{ label: "orange", y: 15  },
-				{ label: "banana", y: 25  },
-				{ label: "mango",  y: 30  },
-				{ label: "grape",  y: 28  }
-			]
 		}
 		]
 	});
 	chart.render();
 }
+window.addEventListener("load", addCounter);
