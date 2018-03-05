@@ -1,0 +1,15 @@
+#getRandomPicture {
+    display: flex;
+ }
+ img {
+     width: 450px;
+     height: 450px;
+     padding:1px;
+     border:1px solid #021a40;
+ }
+ body {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+
+ }
