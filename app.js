@@ -50,21 +50,23 @@ pictureArray.push(
 );
 
 function displayRandomPictures() {
-   var holdPictures = [];
-    while (holdPictures.length < 3 ) {
+    var holdPictures = [];
+    var sendImage = document.getElementById("getRandomPicture");
+    sendImage.innerHTML="";
+        while (holdPictures.length < 3 ) {
         var randomPic = pictureArray[Math.floor(Math.random() * pictureArray.length)];
         if (!holdPictures.includes(randomPic) ){
             holdPictures.push(randomPic)
         }  
     }
-   
     for (var index = 0; index < holdPictures.length; index++) {
         var image = document.createElement("img");
-        var sendImage = document.getElementById("getRandomPicture");
+
          image.src = holdPictures[index].filePath;
          sendImage.appendChild(image);
     }
 }
+
 window.addEventListener("load", addCounter);
 window.addEventListener("load", displayRandomPictures);
 window.addEventListener("load", function() {
