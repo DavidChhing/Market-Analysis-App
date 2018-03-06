@@ -17,9 +17,12 @@ function trackPicClick(event) {
             }
         }
         counter++;
+        var multiplier = counter/15;
         displayRandomPictures();
-        if (counter == 15) {
-            alert("HOLD IT BUCKO");
+        if (counter % 15 ==0) {
+            alert("You can stop right there, thats 15x \n Unless...You want to play again.");
+        } else {
+            document.getElementById("chartContainer").innerHTML = "";
         }
     }
 }
@@ -82,7 +85,6 @@ function showChart() {
 		},
 		data: [              
 		{
-			// Change type to "doughnut", "line", "splineArea", etc.
 			type: "column",
 			dataPoints: pictureArray
 		}
