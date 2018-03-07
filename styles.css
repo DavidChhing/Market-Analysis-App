@@ -1,13 +1,22 @@
 h1 {
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
+    font-family: verdana;
+    color: rgb(56, 154, 136)
+}
+h2 {
+    font-size: 20px;
+    text-align: justify;
+    font-family: verdana;
+    color: rgb(13, 26, 43)
 }
  img {
      width: 305px;
      height: 305px;
      padding:1px;
-     border:1px solid #021a40;
+     border:3px solid #021a40;
     margin: 0 auto;
+    border-radius: 20px;
  }
  body {
     background-color: antiquewhite; 
@@ -15,28 +24,30 @@ h1 {
      height: 100%;
     width: 100%
  }
- div.imageSize{
-    display: flex;
+.imageSize{
+     display: flex;
      flex-wrap: wrap;  
      justify-content: space-between;
      border: 15px slategrey;
-     
+     padding: 20px;
+     outline: 4px solid rgb(97, 117, 118);
+     background-color: rgb(138, 181, 237)     
  }
- div.chart {
-    height: 200px; 
+.chart {
+    height: 300px; 
     width: 100%;
  }
- input.resultButton {
+.resultButton {
      height: 40px;
      width: 300px;
      margin: 0 auto;
-     margin-top: 35px;
-     margin-bottom: 35px;
+     margin-top: 15px;
+     margin-bottom: 15px;
      font-size: 19px;
      display: block;
-     padding: 5px;
-     border: 1px;
-     
-     
-
- }
+     padding: 3px;
+     border: solid blue;
+}
+ol { 
+   font-size: 18px;
+}
