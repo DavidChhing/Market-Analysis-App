@@ -20,7 +20,7 @@ function trackPicClick(event) {
         var multiplier = counter/15;
         displayRandomPictures();
         if (counter % 15 ==0) {
-            alert("You can stop right there, thats 15x \n Unless...You want to play again.");
+            alert("You can stop right there, thats 15x");
         } else {
             document.getElementById("chartContainer").innerHTML = "";
         }
@@ -32,7 +32,6 @@ var Product = function(name, filePath) {
     this.filePath = filePath;
     this.y = 0;
 }
-
 
 var pictureArray = [];
 pictureArray.push(
