@@ -12,6 +12,7 @@ function trackPicClick(event) {
         var filePath = event.target.src.substring(index + 1);
         for (var imageIndex = 0; imageIndex < pictureArray.length; imageIndex++) {
             var item = pictureArray[imageIndex];
+            // If click URL filepath matches the current item filepath, it will add to the count.
             if (item.filePath.indexOf(filePath) !== -1) {
                 item.y++;
             }
@@ -21,6 +22,7 @@ function trackPicClick(event) {
         if (counter % 15 ==0) {
             alert("You can stop right there, thats 15x");
         } else {
+            localStorage.setItem("pictureArray",JSON.stringify(pictureArray))
             document.getElementById("chartContainer").innerHTML = "";
         }
     }
@@ -33,22 +35,26 @@ var Product = function(name, filePath) {
 }
 
 var pictureArray = [];
-pictureArray.push(
-    new Product("Star Wars Bag", "Pictures/bag.jpg"),
-    new Product("Banana Cutter", "Pictures/banana.jpg"),
-    new Product("Yellow Boots", "Pictures/boots.jpg"),
-    new Product("Lumpy Chair", "Pictures/chair.jpg"),
-    new Product("Action Figure", "Pictures/cthulhu.jpg"),
-    new Product("Dragon Meat", "Pictures/dragon.jpg"),
-    new Product("Pen-stils", "Pictures/pen.jpg"),
-    new Product("Pizza Scissors", "Pictures/scissors.jpg"),
-    new Product("Shark Bag", "Pictures/shark.jpg"),
-    new Product("Baby Broom", "Pictures/babysweep.jpg"),
-    new Product("Uni-meat", "Pictures/unicorn.jpg"),
-    new Product("USB Tail", "Pictures/usb.jpg"),
-    new Product("Water Can Can", "Pictures/water_can.jpg"),
-    new Product("Whine Glass", "Pictures/wine_glass.jpg"),
-);
+if (localStorage.getItem("pictureArray")== null) {
+    pictureArray.push(
+        new Product("Star Wars Bag", "Pictures/bag.jpg"),
+        new Product("Banana Cutter", "Pictures/banana.jpg"),
+        new Product("Yellow Boots", "Pictures/boots.jpg"),
+        new Product("Lumpy Chair", "Pictures/chair.jpg"),
+        new Product("Action Figure", "Pictures/cthulhu.jpg"),
+        new Product("Dragon Meat", "Pictures/dragon.jpg"),
+        new Product("Pen-stils", "Pictures/pen.jpg"),
+        new Product("Pizza Scissors", "Pictures/scissors.jpg"),
+        new Product("Shark Bag", "Pictures/shark.jpg"),
+        new Product("Baby Broom", "Pictures/babysweep.jpg"),
+        new Product("Uni-meat", "Pictures/unicorn.jpg"),
+        new Product("USB Tail", "Pictures/usb.jpg"),
+        new Product("Water Can Can", "Pictures/water_can.jpg"),
+        new Product("Whine Glass", "Pictures/wine_glass.jpg"),
+    );
+} else {
+    pictureArray = JSON.parse(localStorage.getItem("pictureArray"));
+}
 
 function displayRandomPictures() {
     var holdPictures = [];
