@@ -17,7 +17,6 @@ function trackPicClick(event) {
             }
         }
         counter++;
-        var multiplier = counter/15;
         displayRandomPictures();
         if (counter % 15 ==0) {
             alert("You can stop right there, thats 15x");
@@ -89,5 +88,11 @@ function showChart() {
 		}
 		]
 	});
-	chart.render();
+    chart.render();
+    
+    var chartType = document.getElementById('chartType');
+chartType.addEventListener( "change",  function(){
+  chart.options.data[0].type = chartType.options[chartType.selectedIndex].value;
+  chart.render();
+});
 }
