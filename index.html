@@ -13,10 +13,29 @@
         <li>Out of the 3 available options, select the image your most likely to buy</li>
         <li>Continue selecting images 15 times</li>
         <li>Once completed, hit the "See Totals" button to get a chart of your results. </li>
+        <li>To play again, just click on another favorite image and continue doing so 15x. Your results will be added to the current chart </br> </li>
+        <li>Undernear the chart, you can change how you view the results by selecting the "chart type" dropdown and select one of the following
+            <ul>
+                <li>Line</li>
+                <li>Column</li>
+                <li>Bar</li>
+                <li>Pie</li>
+                <li>Doughnut</li>
+            </ul>
+        </li>
     </ol>
     <div id="getRandomPicture" class="imageSize"></div>
     <input type="button" value="See Totals" id="show-chart-button" class="resultButton">
     <div id="chartContainer" class="chart"></div>
+    <div>Chart Type:
+            <select id="chartType" name="Chart Type">
+              <option value="line">Line</option>
+              <option value="column">Column</option>
+              <option value="bar">Bar</option>
+              <option value="pie">Pie</option>
+              <option value="doughnut">Doughnut</option>
+            </select>  
+          </div>
 </body>
 <script type="text/javascript" src="app.js"></script>
 <script type="text/javascript" src="canvasjs.min.js"></script>
