@@ -11,18 +11,18 @@ h2 {
     color: rgb(13, 26, 43)
 }
  img {
-     width: 305px;
-     height: 305px;
-     padding:1px;
-     border:3px solid #021a40;
+    width: 305px;
+    height: 305px;
+    padding:1px;
+    border:3px solid #021a40;
     margin: 0 auto;
     border-radius: 20px;
  }
  body {
-    background-color: antiquewhite; 
+     background-image: url("Pictures/money.jpg");
      margin: 0 auto;
      height: 100%;
-    width: 100%
+     width: 100%
  }
 .imageSize{
      display: flex;
@@ -31,7 +31,7 @@ h2 {
      border: 15px slategrey;
      padding: 20px;
      outline: 4px solid rgb(97, 117, 118);
-     background-color: rgb(138, 181, 237)     
+     background-color: rgb(227, 188, 89)     
  }
 .chart {
     height: 300px; 
