@@ -1,0 +1,21 @@
+h1 {
+    font-size: 40px;
+    text-align: center;
+    font-family: verdana;
+    color: rgb(56, 154, 136)
+}
+h2 {
+    font-size: 20px;
+    text-align: justify;
+    font-family: verdana;
+    color: rgb(13, 26, 43)
+}
+body {
+    background-image: url("../Pictures/money.jpg");
+    margin: 0 auto;
+    height: 100%;
+    width: 100%
+}
+ol { 
+    font-size: 18px;
+ }
