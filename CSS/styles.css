@@ -5,7 +5,8 @@
     border:3px solid #021a40;
     margin: 0 auto;
     border-radius: 20px;
-    animation: imageFade 2s;  
+    animation-duration: 1s;
+    animation-name: bounceIn;
  }
 .imageSize{
      display: flex;
@@ -30,12 +31,45 @@
      font-size: 19px;
      display: block;
      padding: 3px;
-     border: solid blue;
+     border: solid black;
+     background-color: red;
+     animation: 
+       pulse 3s ease infinite alternate, 
+       nudge 5s linear infinite alternate;
+     border-radius: 100%;
 }
-@keyframes imageFade {
-    animation-timing-function: ease-out;
-    0% {top: -2em;}
-    50% {top: 0;}
-    100% {top: -2em;}
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes pulse {
+    0%, 100% {
+      background-color: red;
+    }
+    50% {
+      background-color: orange;
+    }
+  }
+  
+  @keyframes nudge {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
     
-}
+    50% {
+      transform: translate(150px, 0);
+    }
+    
+    80% {
+      transform: translate(-150px, 0);
+    }
+  }
