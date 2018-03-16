@@ -21,6 +21,7 @@
 .chart {
     height: 300px; 
     width: 100%;
+    animation: pulse 10s infinite;
  }
 .resultButton {
      height: 40px;
@@ -59,7 +60,6 @@
       background-color: orange;
     }
   }
-  
   @keyframes nudge {
     0%, 100% {
       transform: translate(0, 0);
@@ -71,5 +71,13 @@
     
     80% {
       transform: translate(-150px, 0);
+    }
+  }
+  @keyframes pulse {
+    0% {
+      background-color: rgb(143, 168, 193);
+    }
+    100% {
+      background-color: rgb(196, 105, 100);
     }
   }
