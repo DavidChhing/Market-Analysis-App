@@ -102,3 +102,4 @@ chartType.addEventListener( "change",  function(){
   chart.render();
 });
 }
+

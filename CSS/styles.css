@@ -22,6 +22,8 @@
     height: 300px; 
     width: 100%;
     animation: pulse 10s infinite;
+    animation-duration: 15s;
+    animation-name: chartIn;
  }
 .resultButton {
      height: 40px;
@@ -34,50 +36,61 @@
      padding: 3px;
      border: solid black;
      background-color: red;
-     animation: 
-       pulse 3s ease infinite alternate, 
-       nudge 5s linear infinite alternate;
+     animation: pulse 3s ease infinite alternate, 
      border-radius: 100%;
 }
 @keyframes bounceIn {
-    0% {
-      transform: scale(0.1);
-      opacity: 0;
-    }
-    60% {
-      transform: scale(1.2);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1);
-    }
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
   }
-  @keyframes pulse {
-    0%, 100% {
-      background-color: red;
-    }
-    50% {
-      background-color: orange;
-    }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
   }
-  @keyframes nudge {
-    0%, 100% {
-      transform: translate(0, 0);
-    }
-    
-    50% {
-      transform: translate(150px, 0);
-    }
-    
-    80% {
-      transform: translate(-150px, 0);
-    }
+  100% {
+    transform: scale(1);
   }
-  @keyframes pulse {
-    0% {
-      background-color: rgb(143, 168, 193);
-    }
-    100% {
-      background-color: rgb(196, 105, 100);
-    }
+  }
+@keyframes chartIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+  }
+@keyframes pulse {
+  0%, 100% {
+    background-color: red;
+  }
+  50% {
+    background-color: orange;
+  }
+  }
+@keyframes nudge {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(150px, 0);
+  }
+
+  80% {
+    transform: translate(-150px, 0);
+  }
+  }
+@keyframes pulse {
+  0% {
+    background-color: rgb(143, 168, 193);
+  }
+  100% {
+    background-color: rgb(196, 105, 100);
+  }
   }
